@@ -20,7 +20,7 @@
                 <param name="android-package" value="ibp.plugin.hellocallback.HelloCallback"/>
             </feature>
         </config-file>
-        <source-file src="src/android/HelloCallback.java" target-dir="src/ibp/plugin/HelloCallback" />
+        <source-file src="src/android/HelloCallback.java" target-dir="src/ibp/plugin/hellocallback" />
     </platform>
   
 </plugin>  

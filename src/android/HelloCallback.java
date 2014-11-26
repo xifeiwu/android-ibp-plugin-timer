@@ -1,4 +1,4 @@
-package ibp.plugin.HelloCallback;
+package ibp.plugin.hellocallback;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -52,7 +52,12 @@ public class HelloCallback extends CordovaPlugin {
         th = new Thread(timecnt);
         flag = true;
         th.start();
-        startCallbackContext.success("Timer has started.");
+
+        PluginResult result = new PluginResult(PluginResult.Status.OK,
+                "Timer has started.");
+        result.setKeepCallback(true);
+        startCallbackContext.sendPluginResult(result);
+//        startCallbackContext.success("Timer has started.");
     }
     private void stop(CallbackContext callbackContext){
         stopCallbackContext = callbackContext;

@@ -1,18 +1,24 @@
-<button onclick="helloworldjs();">HelloWorldJS</button>
-<button onclick="helloworldjava('HelloWorldJava');">HelloWorldJava</button>
+<button onclick="startTimer();">startTimer</button>
+<button onclick="stopTimer();">stopTimer</button>
 <script type="text/javascript">  
-  function helloworldjs() {  
-    HelloWorldJS.say();
+  function startTimer() { 
+    HelloCallback.start(
+      function(msgfromnative){
+        console.log(msgfromnative);
+      },
+      function(msgfromnative){
+        console.log(msgfromnative);
+      });
+      console.log("in function startTimer.");
   }
-
-  function helloworldjava(str) {
-    cordova.exec(
-      function(echoValue) {
-        alert(echoValue);
-        },
-      function(err) {
-        callback('Nothing to echo.');
-        },
-      "HelloWorldJava", "echo", [str]);
+  function stopTimer() {
+    HelloCallback.stop(
+      function(msgfromnative){
+        console.log(msgfromnative);
+      },
+      function(msgfromnative){
+        console.log(msgfromnative);
+      });
+      console.log("in function stopTimer.");
   };
 </script>
