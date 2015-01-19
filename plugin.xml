@@ -11,7 +11,7 @@
     </engines>  
 
     <js-module src="www/Timer.js" name="timer">
-        <clobbers target="Timer" />
+        <clobbers target="TimerNative" />
     </js-module>
 
     <platform name="android">
